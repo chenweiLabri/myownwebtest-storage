@@ -19,6 +19,6 @@ COPY index.js .
 COPY package.json .
 RUN npm install
 
-EXPOSE 8086
+EXPOSE 8085
 
-CMD ["node","index.js","--mongo=localhost"]
+CMD ["node","index.js","--mongo=mongo"]
