@@ -1,0 +1,12 @@
+services:
+  mongo:
+    image: "mongo:3.0"
+    ports:
+      - "27017:27017"
+  storage:
+    build: https://github.com/webautotester/storage.git
+    image: "xblanc/wat_storage"
+    ports:
+      - "8086:8086"
+    depends_on:
+      - "mongo"
