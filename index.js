@@ -34,6 +34,6 @@ files.forEach(function(file){
 })
 
 
-app.listen(8086,function(){
-	winston.info('wat_storage is listening on port 8086');
+app.listen(8085,function(){
+	winston.info('wat_storage is listening on port 8085');
 })
