@@ -4,6 +4,8 @@ services:
     image: "mongo:3.0"
     ports:
       - "27017:27017"
+    expose:
+      - "27017"
   myownwebtest-storage:
     build: https://github.com/chenweiLabri/myownwebtest-storage.git
     image: "wei/wat_storage"
