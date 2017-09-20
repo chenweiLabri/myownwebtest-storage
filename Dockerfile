@@ -8,11 +8,11 @@ RUN curl -o /usr/local/bin/n https://raw.githubusercontent.com/visionmedia/n/mas
 RUN chmod +x /usr/local/bin/n
 RUN n latest
 
-RUN adduser --quiet --disabled-password --shell /bin/bash --home /home/runner --gecos "User" storage
+RUN adduser --quiet --disabled-password --shell /bin/bash --home /home/runner --gecos "User" myownwebtest-storage
 
-USER storage
-RUN mkdir /tmp/storage
-WORKDIR /tmp/storage
+USER myownwebtest-storage
+RUN mkdir /tmp/myownwebtest-storage
+WORKDIR /tmp/myownwebtest-storage
 RUN mkdir routes
 COPY routes/*.js routes/
 COPY index.js .
